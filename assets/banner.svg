@@ -1,0 +1,121 @@
+<svg viewBox="0 0 1280 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="banner-title">
+  <title id="banner-title">Standalone Touch ID — Ghost in the Shell style project banner</title>
+
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#141c26" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="finegrid" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M 8 0 L 0 0 0 8" fill="none" stroke="#0f1620" stroke-width="0.3"/>
+    </pattern>
+    <linearGradient id="scanline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00D9FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00D9FF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00D9FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="400" fill="#080b11"/>
+  <rect width="1280" height="400" fill="url(#finegrid)"/>
+  <rect width="1280" height="400" fill="url(#grid)" opacity="0.6"/>
+
+  <g stroke="#00D9FF" stroke-width="1.5" fill="none">
+    <path d="M 30 65 L 30 30 L 65 30"/>
+    <path d="M 1215 30 L 1250 30 L 1250 65"/>
+    <path d="M 30 335 L 30 370 L 65 370"/>
+    <path d="M 1215 370 L 1250 370 L 1250 335"/>
+  </g>
+
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#2a3a48" letter-spacing="2">
+    <text x="80" y="42">SEC//9</text>
+    <text x="1180" y="42" text-anchor="end">A2449.TKL</text>
+    <text x="80" y="360">CLASS//PUBLIC</text>
+    <text x="1180" y="360" text-anchor="end">v1.0 · 2026.06</text>
+  </g>
+
+  <g transform="translate(120, 105)">
+    <rect x="-4" y="-4" width="248" height="198" fill="none" stroke="#1a2530" stroke-width="0.5" stroke-dasharray="4 3"/>
+    <rect width="240" height="190" rx="10" fill="#0e1218" stroke="#1e2a36" stroke-width="1"/>
+
+    <circle cx="120" cy="80" r="34" fill="#060a10"/>
+    <circle cx="120" cy="80" r="34" fill="none" stroke="#243040" stroke-width="0.8"/>
+    <circle cx="120" cy="80" r="30" fill="none" stroke="#00D9FF" stroke-width="0.4" opacity="0.5"/>
+    <circle cx="120" cy="80" r="25" fill="none" stroke="#00D9FF" stroke-width="0.3" opacity="0.3"/>
+
+    <rect x="86" y="79" width="68" height="1.5" fill="url(#scanline)"/>
+
+    <text x="120" y="140" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="500" fill="#e0dcd0" letter-spacing="3">TID/01</text>
+    <text x="120" y="158" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8ea0b0" opacity="0.7">公安9課製</text>
+    <text x="120" y="175" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="7" fill="#4a5a6a" letter-spacing="1">SER · 26·0617 · TKL</text>
+
+    <circle cx="225" cy="18" r="2.5" fill="#00D9FF"/>
+    <circle cx="225" cy="18" r="5" fill="#00D9FF" opacity="0.25"/>
+    <text x="215" y="22" text-anchor="end" font-family="ui-monospace, monospace" font-size="7" fill="#4a5a6a">PWR</text>
+
+    <g stroke="#3a4a5a" stroke-width="0.4" fill="none">
+      <path d="M 10 10 L 20 10"/>
+      <path d="M 220 180 L 230 180"/>
+      <circle cx="15" cy="10" r="1" fill="#3a4a5a"/>
+      <circle cx="225" cy="180" r="1" fill="#3a4a5a"/>
+    </g>
+  </g>
+
+  <line x1="395" y1="100" x2="395" y2="300" stroke="#1a2530" stroke-width="0.5"/>
+
+  <g transform="translate(430, 115)">
+    <text font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#00D9FF" letter-spacing="4">
+      <tspan x="0" y="0">▸ PROJECT · TID/01</tspan>
+    </text>
+
+    <text font-family="ui-monospace, Menlo, Consolas, monospace" font-size="46" font-weight="700" fill="#e8ede4" letter-spacing="2">
+      <tspan x="0" y="52">STANDALONE</tspan>
+      <tspan x="0" y="102">TOUCH ID</tspan>
+    </text>
+
+    <line x1="0" y1="120" x2="480" y2="120" stroke="#00D9FF" stroke-width="0.5" opacity="0.4"/>
+
+    <text x="0" y="140" font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#8fa0b0" letter-spacing="1">
+      biometric authentication for apple silicon
+    </text>
+
+    <text x="0" y="165" font-family="sans-serif" font-size="15" fill="#c8d4dc" opacity="0.75">
+      独立指紋認証装置 · スタンドアローン·コンプレックス
+    </text>
+  </g>
+
+  <g transform="translate(945, 100)">
+    <rect width="270" height="200" fill="#0a0f16" stroke="#1a2530" stroke-width="0.5"/>
+
+    <rect width="270" height="22" fill="#0d1420"/>
+    <text x="10" y="15" font-family="ui-monospace, monospace" font-size="10" fill="#00D9FF" letter-spacing="2">▸ SYSTEM STATUS</text>
+    <text x="260" y="15" text-anchor="end" font-family="ui-monospace, monospace" font-size="9" fill="#4a5a6a">READY</text>
+
+    <g font-family="ui-monospace, Menlo, monospace" font-size="10">
+      <text x="12" y="46"><tspan fill="#556570">TARGET .......</tspan> <tspan fill="#e0e6ec">APPLE SILICON</tspan></text>
+      <text x="12" y="66"><tspan fill="#556570">DONOR ........</tspan> <tspan fill="#e0e6ec">A2449 · TKL</tspan></text>
+      <text x="12" y="86"><tspan fill="#556570">CRYPTO .......</tspan> <tspan fill="#e0e6ec">AES-GCM P-256</tspan></text>
+      <text x="12" y="106"><tspan fill="#556570">AUTH .........</tspan> <tspan fill="#e0e6ec">SE ATTESTATION</tspan></text>
+      <text x="12" y="126"><tspan fill="#556570">INTERFACE ....</tspan> <tspan fill="#e0e6ec">LIGHTNING</tspan></text>
+      <text x="12" y="146"><tspan fill="#556570">MATERIAL .....</tspan> <tspan fill="#e0e6ec">PETG</tspan></text>
+      <text x="12" y="166"><tspan fill="#556570">STATUS .......</tspan> <tspan fill="#00D9FF">OPERATIONAL</tspan></text>
+      <text x="12" y="186"><tspan fill="#556570">LICENSE ......</tspan> <tspan fill="#e0e6ec">MIT · CC BY-SA</tspan></text>
+    </g>
+
+    <line x1="0" y1="22" x2="270" y2="22" stroke="#1a2530" stroke-width="0.3"/>
+  </g>
+
+  <g transform="translate(80, 320)" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#3a4a5a" letter-spacing="4">
+    <line x1="0" y1="0" x2="1120" y2="0" stroke="#1a2530" stroke-width="0.3"/>
+    <text x="0" y="18">// SECTION 9 / OPEN SOURCE / NO WARRANTY / BUILD AT OWN RISK</text>
+    <text x="1120" y="18" text-anchor="end" fill="#00D9FF">CTRL + F5 TO ENGAGE</text>
+  </g>
+
+  <g font-family="ui-monospace, monospace" font-size="7" fill="#1a2530" letter-spacing="2">
+    <text x="30" y="200">01</text>
+    <text x="30" y="215">02</text>
+    <text x="30" y="230">03</text>
+    <text x="1250" y="200" text-anchor="end">A2</text>
+    <text x="1250" y="215" text-anchor="end">B4</text>
+    <text x="1250" y="230" text-anchor="end">C9</text>
+  </g>
+</svg>

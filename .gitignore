@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Build artifacts
+node_modules/
+dist/
+build/
+*.log
+
+# STL files — should be downloaded from Printables, not tracked here
+# (uncomment if you want to keep local copies out of git)
+# *.stl
+# *.3mf
+
+# Preview / render artifacts
+*.png.bak
+banner_preview*.png
+banner_hires*.png
+
+# OS
+Thumbs.db
+Desktop.ini
