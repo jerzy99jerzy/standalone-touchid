@@ -4,7 +4,7 @@ Common problems and diagnostic paths.
 
 ## 11.1 Print issues
 
-### C plate does not click — button sticks depressed
+### C plate does not click - button sticks depressed
 
 **Diagnosis:** Layer height too high (printed at 0.20 or 0.12 mm instead of 0.10 mm), or the central stem is too tall.
 
@@ -16,7 +16,7 @@ Common problems and diagnostic paths.
 
 **Fix:**
 - Too tight: file the edges with a fine file or 600-grit paper.
-- Too loose: apply a thin strip of electrical tape to the interior edge of the lid to take up the gap. Or reprint with 2–3% smaller flow rate.
+- Too loose: apply a thin strip of electrical tape to the interior edge of the lid to take up the gap. Or reprint with 2-3% smaller flow rate.
 
 ### Print warps at the corners
 
@@ -78,7 +78,7 @@ Common problems and diagnostic paths.
 
 ### Touch ID stops working after Mac reboot
 
-**Diagnosis:** Secure Enclave policy — first authentication after boot always requires password.
+**Diagnosis:** Secure Enclave policy - first authentication after boot always requires password.
 
 **Fix:** Enter your password once at the login screen. Subsequent Touch ID prompts will work.
 
@@ -92,16 +92,16 @@ Common problems and diagnostic paths.
 
 Some failures are unrecoverable:
 
-- **Torn Touch ID ribbon cable during teardown** — buy another keyboard.
-- **Damaged logic board (visible burn marks, bent connectors, cracked components)** — buy another keyboard.
-- **Battery swelling or damage during removal** — dispose safely, buy another keyboard.
-- **Lost or damaged Touch ID button module** — buy another keyboard.
+- **Torn Touch ID ribbon cable during teardown** - buy another keyboard.
+- **Damaged logic board (visible burn marks, bent connectors, cracked components)** - buy another keyboard.
+- **Battery swelling or damage during removal** - dispose safely, buy another keyboard.
+- **Lost or damaged Touch ID button module** - buy another keyboard.
 
 The keyboard itself is the expensive part; everything else (filament, screws, tools) is cheap. If the electronics are wrecked, cutting your losses and buying a second used keyboard is faster than trying to salvage.
 
 ## 11.5 Where to get help
 
-- **GitHub issues on this repo** — for documentation gaps or corrections
-- **Jeff Geerling's blog comments** — active discussion of the original build
-- **Printables model comments** — Calvin responds to model-specific questions
-- **r/AppleHelp, r/hardware, r/functionalprint on Reddit** — general community support
+- **GitHub issues on this repo** - for documentation gaps or corrections
+- **Jeff Geerling's blog comments** - active discussion of the original build
+- **Printables model comments** - Calvin responds to model-specific questions
+- **r/AppleHelp, r/hardware, r/functionalprint on Reddit** - general community support

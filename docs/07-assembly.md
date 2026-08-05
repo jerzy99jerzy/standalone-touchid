@@ -1,6 +1,6 @@
 # 7. Assembly
 
-Execute the steps in the order given. Some are not reversible without full disassembly. First-time assembly typically takes 45–60 minutes; step 10 (Lightning port) alone often eats 20–30 minutes on the first attempt.
+Execute the steps in the order given. Some are not reversible without full disassembly. First-time assembly typically takes 45-60 minutes; step 10 (Lightning port) alone often eats 20-30 minutes on the first attempt.
 
 ## Sequence
 
@@ -18,11 +18,11 @@ Verify the ribbon cable routes through the correct slot without strain.
 
 **4. Test the click one more time**
 
-Press the C plate — you should get a clean mechanical click with slight resistance. If too stiff, remove the C plate, sand the central stem lightly with 600-grit paper, and retest. Do not proceed with a stiff click; it will only get worse under assembly compression.
+Press the C plate - you should get a clean mechanical click with slight resistance. If too stiff, remove the C plate, sand the central stem lightly with 600-grit paper, and retest. Do not proceed with a stiff click; it will only get worse under assembly compression.
 
 **5. Install the spring plate**
 
-Fit the metal spring plate (original from the keyboard) on top of the C plate. Orientation matters — the longer axis of the spring plate runs along the longer axis of the box. Calvin's Printables page has photos.
+Fit the metal spring plate (original from the keyboard) on top of the C plate. Orientation matters - the longer axis of the spring plate runs along the longer axis of the box. Calvin's Printables page has photos.
 
 **6. Screw the spring plate to the button**
 
@@ -60,10 +60,10 @@ Slide the lid into the box from above. **Critical orientation:** the wider, more
 
 **13. (Optional) Rubber feet**
 
-Apply four small adhesive rubber feet to the bottom — two front, two back. Prevents desk slide. Recommended for any surface where the device will move under button pressure.
+Apply four small adhesive rubber feet to the bottom - two front, two back. Prevents desk slide. Recommended for any surface where the device will move under button pressure.
 
 ## Assembly complete
 
-At this point the device is physically finished. Do not connect it to a Mac yet unless you're proceeding directly to pairing — the Lightning port is now the only electrical interface and any fault handled from this point requires reopening the box.
+At this point the device is physically finished. Do not connect it to a Mac yet unless you're proceeding directly to pairing - the Lightning port is now the only electrical interface and any fault handled from this point requires reopening the box.
 
 Proceed to [section 8: Pairing](08-pairing.md).

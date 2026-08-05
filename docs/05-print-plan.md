@@ -2,13 +2,13 @@
 
 ## 5.1 The four parts
 
-Four independent parts, printed in two different quality presets. STL files are Calvin's — download from [Printables](https://www.printables.com/model/355924-clickable-touch-id-box-tkl-board-wired). Do not redistribute the STL files; link to source.
+Four independent parts, printed in two different quality presets. STL files are Calvin's - download from [Printables](https://www.printables.com/model/355924-clickable-touch-id-box-tkl-board-wired). Do not redistribute the STL files; link to source.
 
 | Part | Function |
 |------|----------|
 | **Box** | Main enclosure body. Houses logic board, Lightning port, button assembly. |
 | **Lid** | Top cover, slides in from above. Visible surface of the finished device. |
-| **C plate** | Click mechanism plate. Critical tolerance — determines button feel. |
+| **C plate** | Click mechanism plate. Critical tolerance - determines button feel. |
 | **Back plate** | Rear closure. Compresses spring plate and secures ribbon cable path. |
 
 ## 5.2 Slicer settings per part
@@ -28,15 +28,15 @@ The C plate is flagged in bold because failure to use 0.10 mm layer height produ
 
 | Parameter | Value |
 |-----------|-------|
-| Nozzle temperature | 235–245°C (start at 240°C, calibrate per spool) |
-| Bed temperature | 75–85°C (PEI sheet: 80°C; glass: 75°C with PVA stick or Magigoo PETG) |
-| Cooling fan | 30–50%, enable from layer 3 |
-| Retraction, direct drive | 0.8–1.0 mm @ 35–40 mm/s |
-| Retraction, Bowden | 4–5 mm @ 35–40 mm/s |
+| Nozzle temperature | 235-245°C (start at 240°C, calibrate per spool) |
+| Bed temperature | 75-85°C (PEI sheet: 80°C; glass: 75°C with PVA stick or Magigoo PETG) |
+| Cooling fan | 30-50%, enable from layer 3 |
+| Retraction, direct drive | 0.8-1.0 mm @ 35-40 mm/s |
+| Retraction, Bowden | 4-5 mm @ 35-40 mm/s |
 | First layer height | 0.20 mm (or 0.10 mm for C plate) |
 | Outer perimeter speed (C plate only) | Reduce to 30 mm/s for click-mechanism detail |
 
-These are a good starting point. Run a temperature tower on any new spool before printing the C plate — PETG varies more from batch to batch than PLA does.
+These are a good starting point. Run a temperature tower on any new spool before printing the C plate - PETG varies more from batch to batch than PLA does.
 
 ## 5.4 Bed orientation
 
@@ -49,9 +49,9 @@ These are a good starting point. Run a temperature tower on any new spool before
 
 Three finishing operations after removing the parts from the printer:
 
-1. **Top surface of box and back plate** — light pass with 320-grit sandpaper. Eliminates visible layer lines and produces a matte finish that matches Apple's aesthetic.
-2. **Lid edges** — test slide-fit into the box. If too tight, ease with a fine file or 600-grit paper. If loose (lid falls out), do nothing — internal components will hold it in place once installed.
-3. **C plate — mandatory test fit with the Touch ID button before final assembly.** Insert the button into the C plate and press. It should give a clean mechanical click. If too stiff or no click, sand the raised central point on the C plate with 600-grit paper, 0.1 mm at a time, testing after each pass. This is the most common failure mode and the most common place to rescue the feel of the button.
+1. **Top surface of box and back plate** - light pass with 320-grit sandpaper. Eliminates visible layer lines and produces a matte finish that matches Apple's aesthetic.
+2. **Lid edges** - test slide-fit into the box. If too tight, ease with a fine file or 600-grit paper. If loose (lid falls out), do nothing - internal components will hold it in place once installed.
+3. **C plate - mandatory test fit with the Touch ID button before final assembly.** Insert the button into the C plate and press. It should give a clean mechanical click. If too stiff or no click, sand the raised central point on the C plate with 600-grit paper, 0.1 mm at a time, testing after each pass. This is the most common failure mode and the most common place to rescue the feel of the button.
 
 ## 5.6 Print time
 

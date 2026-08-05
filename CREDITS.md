@@ -1,8 +1,8 @@
 # Credits
 
-This project is documentation around work by others. It does not distribute any of the primary artifacts (STL files, videos, code) — those live at their sources, linked below.
+This project is documentation around work by others. It does not distribute any of the primary artifacts (STL files, videos, code) - those live at their sources, linked below.
 
-## 3D model — the primary artifact
+## 3D model - the primary artifact
 
 **[Calvin (@Calvin_5743 on Printables)](https://www.printables.com/@Calvin_5743)**
 
@@ -17,7 +17,7 @@ This project is documentation around work by others. It does not distribute any 
 
 **SnazzyLabs**
 - Original standalone Touch ID module concept
-- [YouTube: Standalone Touch ID — proof of concept](https://www.youtube.com/watch?v=hz9Ek6fxX48)
+- [YouTube: Standalone Touch ID - proof of concept](https://www.youtube.com/watch?v=hz9Ek6fxX48)
 - [Printables: Standalone Touch ID Module for Mac](https://www.printables.com/model/320000)
 
 **GLOUPY**
@@ -27,7 +27,7 @@ This project is documentation around work by others. It does not distribute any 
 ## Documentation and popularization
 
 **Jeff Geerling**
-- [Blog post: "Why doesn't Apple make a standalone Touch ID?"](https://www.jeffgeerling.com/blog/2025/why-doesnt-apple-make-standalone-touch-id) — the direct inspiration for this English documentation effort
+- [Blog post: "Why doesn't Apple make a standalone Touch ID?"](https://www.jeffgeerling.com/blog/2025/why-doesnt-apple-make-standalone-touch-id) - the direct inspiration for this English documentation effort
 - [YouTube build video](https://www.youtube.com/watch?v=tzB6m2VTxAg)
 - Jeff's writeup documented the specific 0.10 mm vs 0.12 mm layer height issue for the C plate, which this guide reproduces prominently
 

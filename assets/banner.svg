@@ -1,5 +1,5 @@
 <svg viewBox="0 0 1280 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="banner-title">
-  <title id="banner-title">Standalone Touch ID — Ghost in the Shell style project banner</title>
+  <title id="banner-title">Standalone Touch ID - Ghost in the Shell style project banner</title>
 
   <defs>
     <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
