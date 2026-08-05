@@ -33,3 +33,4 @@ banner_hires*.png
 # OS
 Thumbs.db
 Desktop.ini
+*.patch
