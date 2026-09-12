@@ -1,12 +1,14 @@
 # 10. Customization - Ghost in the Shell aesthetic direction
 
-The 1995 Oshii film and the *Stand Alone Complex* series established a coherent visual language: industrial-grade rather than consumer-grade equipment, minimal typography with high information density, muted palettes with one precise accent color, and visible age suggesting field-deployed rather than freshly-unboxed hardware. This build is literally a *standalone* Touch ID; the aesthetic has built-in thematic justification.
+Everything in this section is taste, not engineering. It is here because a build this small is one of the few where finish is a real part of the outcome, and because deciding the look before you print saves reprinting. None of it affects function, and skipping the whole section costs you nothing.
+
+The 1995 Oshii film and the *Stand Alone Complex* series share a coherent visual language: industrial-grade rather than consumer-grade equipment, minimal typography at high information density, muted palettes with one precise accent, and visible age suggesting field-deployed rather than freshly-unboxed hardware. This build is literally a *standalone* Touch ID, so the joke writes itself.
 
 Four rules for staying in this design register:
 
 1. **Industrial-grade, not consumer-grade** - the device looks like it came from an equipment locker, not a retail store.
 2. **Minimal typography, high information density** - serial numbers instead of brand names.
-3. **Muted palette + one accent** - charcoal, gunmetal, occasional cyan (Motoko's signature) or safety orange.
+3. **Muted palette + one accent** - charcoal, gunmetal, with cyan or safety orange as the single accent.
 4. **Visible age** - light patina suggesting field-deployed hardware.
 
 ## 10.1 Four tiers of intervention
@@ -15,13 +17,11 @@ Ordered by effort and cost.
 
 ### Tier 0 - filament choice alone
 
-Cheapest change with the largest visual impact.
+Cheapest change, largest visual return, and the only tier that costs no extra time.
 
-- **Polymaker PolyLite ASA Galaxy Black** - deep black with micro-glitter mineral pigment, mimics anodized metal
-- **Spectrum Premium PETG "Gunmetal Grey"** - approximates brushed steel after light 320-grit sanding
-- **Fiberlogy "Tungsten Grey" PETG** - graphite-loaded, actually metallic to touch and under light
+Stay in PETG. Dark greys and metallic-pigment blacks are widely available from Spectrum, Fiberlogy, Polymaker and others, but colorway names churn faster than this document updates, so check what your supplier actually stocks rather than hunting a SKU named here. What you want is a dark grey or a black carrying mineral or micro-glitter pigment; both read as anodized metal after a light 320-grit pass.
 
-Zero extra work. Print exactly per [section 5](05-print-plan.md) with substituted filament.
+**Do not substitute ASA or ABS to chase a finish.** They want an enclosure and a hotter bed, the parameters in [section 5](05-print-plan.md) do not apply to them, and the box will warp at the corners without one. A better black is not worth reprinting the C plate for. In PETG, print exactly per section 5 and change nothing but the spool.
 
 ### Tier 1 - slicer emboss
 
@@ -37,7 +37,7 @@ Line 1: model number (device tag for your home lab, useful if you build more tha
 Line 2: kanji "Kōan Kyū-ka" - Public Security Section 9, direct anime reference.
 Line 3: faux serial number with build date in YY·MMDD format.
 
-**Font:** Microgramma D Extended, or free equivalent Eurostile. Prints cleanly at 0.4 mm deboss without slicer modification.
+**Font:** Microgramma D Extended or Eurostile carry the right period feel. Both are commercial Linotype faces, so if you want something libre, Michroma on Google Fonts is the closest near-match worth evaluating. Any of the three debosses cleanly at 0.4 mm without slicer modification.
 
 ### Tier 2 - chemical post-processing
 
@@ -59,13 +59,13 @@ Cable-level customization.
 
 ### Tier 4 - LED status accent (advanced)
 
-Warned against in the [build guide](../README.md) but included here for completeness.
+The only tier this guide argues against. It is the one change that puts a soldering iron and a second power source next to a board you cannot replace, in exchange for decoration. It is documented because people will do it anyway.
 
-A single 1206 SMD LED in cyan (#00D9FF - the signature Major Kusanagi color) behind a 2 mm semi-transparent window in the enclosure side, powered from a separate USB-C breakout (~$5 from Adafruit).
+A single 1206 SMD LED behind a 2 mm semi-transparent window in the enclosure side, with a current-limiting resistor sized for your supply, powered from a separate USB-C breakout at roughly $5. Cyan (#00D9FF) is the accent this documentation uses throughout, a convention adopted here rather than a colour anyone official specified.
 
-**Do not tap the Lightning line.** That will break power to the logic board.
+**Do not tap the Lightning line for it.** You would be drawing from a power path budgeted for the logic board alone, with no upside and a failure mode that ends in reopening the box.
 
-Effect: one discreet point of light visible in low-light conditions, suggests the device is "live". Integration time ~2 hours, requires soldering, but delivers a finishing touch that reads well on video.
+The effect is one discreet point of light in a dark room. Roughly two hours and a soldering iron. It photographs well, which is most of the honest argument for it.
 
 ## 10.2 Aesthetic coherence - building a set
 
@@ -79,6 +79,6 @@ Result: a coordinated equipment stack rather than a random pile of black plastic
 
 ## 10.3 What reads well on video
 
-For content creators - Tier 1 (Section 9 stencil) and Tier 4 (cyan LED) read cleanest on a mid-shot camera. Stencil typography has good contrast ratio; the LED is a visible attention point.
+If you are filming the thing, Tier 1 and Tier 4 survive a mid-shot: stencil typography holds its contrast and the LED gives the eye somewhere to land.
 
-Tier 2 (weathered metal) looks phenomenal at close range but may read as "dirty enclosure" from a normal desk distance rather than intentional patina.
+Tier 2 does not. Weathered metal is excellent in the hand and at close range, and from normal desk distance it reads as a dirty enclosure rather than as intentional patina. Worth knowing before you spend the twenty minutes.

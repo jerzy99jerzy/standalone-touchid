@@ -1,0 +1,74 @@
+name: docs-check
+
+on:
+  push:
+  pull_request:
+  schedule:
+    # Weekly. External link rot is the main way this repository decays:
+    # Apple rotates Platform Security URLs and Printables models move.
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  style:
+    name: style gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: No em-dashes or en-dashes in authored files
+        run: |
+          # docs-site/ is exempt: those files are generated and their
+          # bootstrap is not ours to restyle. Everything else is authored.
+          if grep -rInP '[\x{2013}\x{2014}]' \
+               --exclude-dir=.git \
+               --exclude-dir=docs-site \
+               --exclude-dir=assets \
+               . ; then
+            echo "::error::em-dash or en-dash found in an authored file; use a spaced hyphen"
+            exit 1
+          fi
+          echo "clean"
+
+      - name: STL files are not redistributed here
+        run: |
+          if find . -path ./.git -prune -o \( -name '*.stl' -o -name '*.3mf' \) -print | grep -q .; then
+            echo "::error::model files must not be committed; link to Printables instead"
+            exit 1
+          fi
+          echo "clean"
+
+      - name: Internal links resolve
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --include-fragments --no-progress './**/*.md'
+          fail: true
+
+  links:
+    name: external links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check external links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-concurrency 4
+            --accept 200,206,429
+            --exclude-path docs-site
+            './**/*.md'
+          fail: false
+
+      - name: Open an issue if links are dead
+        if: env.lychee_exit_code != 0 && github.event_name == 'schedule'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Dead links in documentation
+          content-filepath: ./lychee/out.md
+          labels: documentation, link-rot

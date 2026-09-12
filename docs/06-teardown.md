@@ -1,6 +1,6 @@
 # 6. Teardown - Magic Keyboard with Touch ID
 
-The hardest part of this project. Not the print. Apple adhesive-bonds the keyboard in multiple layers. Geerling described this phase as more stressful than the actual build - three specific elements are easy to permanently destroy: the Touch ID ribbon cable, the battery flex PCB, and the Li-Po cell itself (bending it means pyrotechnics).
+The hardest part of this project, and it is not the print. Apple bonds the keyboard together in layers of adhesive; Geerling calls tearing one apart far more daunting than it ought to be. Three things here are easy to destroy for good: the Touch ID flex cable, the battery flex PCB, and the Li-Po cell itself, which does not forgive being bent.
 
 ## 6.1 Heating strategy
 
@@ -8,10 +8,10 @@ The adhesive holding the back cover softens to a gum-like state at 50-65°C. Fou
 
 - **Your 3D printer's heated bed (safest).** Set to 60-65°C, place the keyboard face down, wait 5-10 minutes. Adhesive softens evenly across the whole panel.
 - **iOpener (microwavable gel pack).** Localized, controlled heat.
-- **Heat gun on lowest setting.** Risk of localized ABS deformation on the keyboard plastic. Keep 10 cm distance, keep the gun moving continuously.
+- **Heat gun on lowest setting.** What Calvin used. Risk of deforming the keyboard's plastic locally. Keep 10 cm of distance and keep the gun moving.
 - **1500W hair dryer.** Slower, safer, works fine.
 
-Geerling propped his keyboard against a convection radiator. That works, but requires close monitoring - plastic starts deforming around 80°C.
+The heated-bed method is the one Calvin passes along from a commenter on his model page, and it is the least likely to cook anything. Geerling leaned his keyboard against a space heater instead, with the caveat not to melt it. Either works with attention; plastic starts deforming around 80°C, so the risk is inattention rather than method.
 
 ## 6.2 Four critical failure points
 
@@ -34,7 +34,7 @@ The battery is glued to the lower housing with a thick layer of adhesive. Apple 
 
 ### Point 3 - Touch ID ribbon cable to logic board
 
-This is the ribbon Geerling described as 50/50 whether it would tear during his pull. It runs from the Touch ID button assembly under the keyboard chassis, connecting to the logic board. Adhesive holds it firmly to the underlying housing.
+The flat flex with surface-mount components on it, running from the logic board across to the Touch ID button. Geerling put his odds of tearing it at fifty-fifty while pulling it free, and his did survive. Adhesive holds it firmly to the housing underneath along its whole length.
 
 **Technique:**
 1. Do not pull. Lift parallel.
@@ -48,7 +48,7 @@ If this ribbon tears, the keyboard is scrapped. Buy another one.
 
 The Touch ID module itself has a plastic keycap on top of the sensor (the square cover with the finger indentation). You must remove this - in the new enclosure, the sensor operates without a keycap, directly under the C plate surface.
 
-The keycap is held by small internal clips. Pry it off gently with the spudger from the edge. Calvin's Printables page shows a photograph of what the button should look like after keycap removal.
+The keycap is held by small internal clips. Pry it off gently with the spudger from the edge. Calvin's page shows a photograph of the button as it should look afterwards, and points at [the moment in the SnazzyLabs video where the cap comes off](https://youtu.be/hz9Ek6fxX48?t=374). The cap is glued as well as clipped and breaks easily, so go slower here than the step seems to deserve.
 
 ## 6.3 Parts to extract
 

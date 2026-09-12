@@ -10,15 +10,15 @@ Auto Unlock and Approve with Apple Watch require active Wrist Detection. Apple e
 
 Therefore, the watch cannot sit on your desk in a 3D-printed cradle as a biometric puck. It must be worn.
 
-### The PPG spoofing workaround
+### Why the obvious workaround is not one
 
-Wrist Detection uses photoplethysmography (green LEDs and IR photodiodes on the back of the watch) combined with the accelerometer. A workaround - placing an absorptive material (dark felt, black silicone) under the PPG sensor combined with a one-time motion to satisfy the accelerometer - keeps the watch in an unlocked state indefinitely.
+Wrist Detection combines photoplethysmography, the green LEDs and IR photodiodes on the back of the watch, with the accelerometer. Both signals can be satisfied by a watch sitting on a desk rather than on a wrist, and people do this.
 
-This works. It also breaks the threat model in an unacceptable way. Anyone with physical access to your desk can authorize `sudo`, install software, use Apple Pay (if enabled), or unlock Keychain items. For a security-conscious workstation, this route is off the table.
+It works, and it is still the wrong answer. Defeating Wrist Detection converts the watch from something that authenticates a present, living wearer into a token that authorizes anyone who reaches your desk: `sudo`, software installs, Apple Pay if enabled, Keychain items. That is not a smaller version of Touch ID, it is the removal of the only thing making the watch an authenticator. The mechanics of the bypass are left out here deliberately; the conclusion is what matters and the conclusion is that this route is off the table.
 
 ### The economics
 
-Second argument against Apple Watch SE: it is not cheaper. Used Apple Watch SE Gen 1 in most markets is $130-180 USD equivalent. Used A2449 Magic Keyboard with Touch ID is $100-140 USD equivalent. The Geerling/Calvin build is cheaper and preserves true biometric authentication with liveness detection.
+The second argument is that it is not even cheaper. Spot-checked mid-2026, a used Apple Watch SE first generation ran $130-180 USD equivalent against $100-140 for a used A2449. *[Both figures are used-market prices and will drift; the point is the ordering, not the numbers.]* The keyboard route came out cheaper and kept capacitive subdermal sensing, which the watch does not offer at all.
 
 ## 2.2 USB-C fingerprint readers with FIDO2
 

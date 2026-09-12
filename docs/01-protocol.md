@@ -45,7 +45,7 @@ This is also why a counterfeit or tampered sensor cannot be substituted: the sha
 
 The keyboard must be paired to a specific Mac before any biometric operation. Apple performs this pairing at the factory for keyboards bundled with a Mac. User-initiated pairing is also supported, which is the path this project relies on, because the donor keyboard was almost certainly paired to someone else's Mac before you acquired it.
 
-A keyboard is paired to exactly one Mac at a time. A single Mac can maintain pairings with up to five keyboards simultaneously. There is no equivalent of Activation Lock on these keyboards; pairing identity is freely cyclable, which is what makes buying a used unit viable.
+A keyboard is paired to exactly one Mac at a time. There is no equivalent of Activation Lock on these keyboards; pairing identity is freely cyclable, which is what makes buying a used unit viable. *[The commonly repeated figure of five simultaneous keyboard pairings per Mac has not been traced to an Apple source for this guide. It is recorded here as unverified rather than dropped, because it is the kind of number that gets copied between writeups without anyone checking it.]*
 
 ### The pairing handshake
 
@@ -100,7 +100,11 @@ The one property you do change is physical: the sensor is now under a 3D-printed
 
 ## 1.8 What the protocol does not protect (forward reference)
 
-The cryptographic architecture is strong against remote and transport attackers. It says nothing about an attacker with your enrolled finger, an attacker who can coerce you, or an attacker who has compromised macOS itself at a level below the authorization prompt. Those live in the [threat model](09-threat-model.md), which builds directly on this section.
+The cryptographic architecture is strong against remote and transport attackers. It says nothing about an attacker with your enrolled finger, an attacker who can coerce you, or an attacker who has compromised macOS below the authorization prompt.
+
+One more limit deserves naming here rather than only in the threat model, because it follows directly from the architecture above. Attestation authenticates the **biometric** channel. The donor's HID keyboard interface is not part of that channel and is not covered by it. Everything in this section is an argument about a used device's Touch ID path, not a clean bill of health for the whole board.
+
+All of this lives in the [threat model](09-threat-model.md), which builds directly on this section.
 
 ## References
 

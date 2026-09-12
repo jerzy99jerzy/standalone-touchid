@@ -13,16 +13,18 @@ Four independent parts, printed in two different quality presets. STL files are 
 
 ## 5.2 Slicer settings per part
 
-Values are calibrated for Calvin's original PETG setup and confirmed by Geerling's build (who had to reprint the C plate at 0.10 mm after a failed 0.12 mm attempt).
+Every value in this table comes from the notes section of Calvin's model page, describing the settings he printed with: a Prusa i3 MK3S+ on a textured PEI sheet, Prusament Jet Black PETG, 100% infill, no supports, box and lid at a 90° fill angle and the C plate and back plate at 45°. In PrusaSlicer terms he used the 0.20 mm QUALITY preset for three parts and the 0.10 mm DETAIL preset for the C plate.
 
-| Part | Layer height | Infill | Infill angle | Perimeters | Supports |
-|------|-------------|--------|--------------|------------|----------|
-| Box | 0.20 mm | 100% | 90° | 3 | No |
-| Lid | 0.20 mm | 100% | 90° | 3 | No |
-| **C plate** | **0.10 mm** | 100% | 45° | 3 | No |
-| Back plate | 0.20 mm | 100% | 45° | 3 | No |
+| Part | Layer height | Infill | Infill angle | Supports |
+|------|-------------|--------|--------------|----------|
+| Box | 0.20 mm | 100% | 90° | No |
+| Lid | 0.20 mm | 100% | 90° | No |
+| **C plate** | **0.10 mm** | 100% | 45° | No |
+| Back plate | 0.20 mm | 100% | 45° | No |
 
-The C plate is flagged in bold because failure to use 0.10 mm layer height produces geometry that either does not click, or leaves the button stuck depressed. This is the one setting you do not compromise on.
+Perimeter count is deliberately absent: Calvin does not state one, so the preset default applies. Three perimeters is a sane choice at 100% infill and nothing here depends on it. The 90° fill angle on the box and lid is cosmetic in origin, chosen for how the top surface looks.
+
+**The C plate at 0.10 mm is the one setting with no room in it.** Calvin puts the instruction in bold on his own page, twice. Print it coarser and the raised centre point comes out too tall, which leaves the button either dead or stuck depressed. Geerling's build corroborates the failure: his slicer default of 0.12 mm produced a plate that sat too high and he reprinted at 0.1 mm. *[He names the part the "Touch ID backing plate" rather than the C plate; Calvin's instruction is unambiguous and is the one to follow.]*
 
 ## 5.3 PETG material parameters
 
@@ -36,9 +38,11 @@ The C plate is flagged in bold because failure to use 0.10 mm layer height produ
 | First layer height | 0.20 mm (or 0.10 mm for C plate) |
 | Outer perimeter speed (C plate only) | Reduce to 30 mm/s for click-mechanism detail |
 
-These are a good starting point. Run a temperature tower on any new spool before printing the C plate - PETG varies more from batch to batch than PLA does.
+Calvin does not publish temperatures, so unlike the table in 5.2 these are conventional PETG values rather than sourced ones. Treat them as a starting point and run a temperature tower on any new spool before committing to the C plate. PETG varies more between batches than PLA does, and the C plate is the part where that variation shows up as a dead button.
 
 ## 5.4 Bed orientation
+
+*Orientations below are read off the geometry and Calvin's build photographs rather than stated by him in text.*
 
 - **Box:** Top surface up (the side with the Touch ID button cutout is on top of the print). The most tolerance-critical surfaces are not directly on the bed. Clean top surface and simple print path.
 - **Lid:** Flat, visible side up. The angled edges (which slide into the box slot) are oriented sideways and need no supports.
@@ -51,7 +55,7 @@ Three finishing operations after removing the parts from the printer:
 
 1. **Top surface of box and back plate** - light pass with 320-grit sandpaper. Eliminates visible layer lines and produces a matte finish that matches Apple's aesthetic.
 2. **Lid edges** - test slide-fit into the box. If too tight, ease with a fine file or 600-grit paper. If loose (lid falls out), do nothing - internal components will hold it in place once installed.
-3. **C plate - mandatory test fit with the Touch ID button before final assembly.** Insert the button into the C plate and press. It should give a clean mechanical click. If too stiff or no click, sand the raised central point on the C plate with 600-grit paper, 0.1 mm at a time, testing after each pass. This is the most common failure mode and the most common place to rescue the feel of the button.
+3. **C plate - mandatory test fit with the Touch ID button before final assembly.** This one is Calvin's instruction, not a suggestion: the C plate detail comes out differently on different printers, so put the button into the plate and test the click before you assemble anything. It should give a clean mechanical click. If it is stiff or dead, sand the raised central point with 600-grit paper, 0.1 mm at a time, testing between passes. This is both the most common failure mode and the easiest one to recover from, but only while the box is still open.
 
 ## 5.6 Print time
 

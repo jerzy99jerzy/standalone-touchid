@@ -1,0 +1,67 @@
+name: Build report
+description: Report a build attempt, successful or not
+title: "[build] "
+labels: ["build-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every field here exists because it changed the outcome for somebody. Partial reports are welcome; a failed build is as useful as a successful one, sometimes more.
+  - type: input
+    id: donor
+    attributes:
+      label: Donor keyboard
+      description: Model number from the underside, charging port, and where you bought it.
+      placeholder: "A2449, Lightning, used from OLX"
+    validations:
+      required: true
+  - type: input
+    id: printer
+    attributes:
+      label: Printer and slicer
+      placeholder: "Prusa MK4, PrusaSlicer 2.8"
+    validations:
+      required: true
+  - type: input
+    id: filament
+    attributes:
+      label: Filament
+      placeholder: "Spectrum Premium PETG, black"
+    validations:
+      required: true
+  - type: dropdown
+    id: cplate
+    attributes:
+      label: Did the C plate click on the first print?
+      options:
+        - "Yes, first print at 0.10 mm"
+        - "No, needed sanding"
+        - "No, reprinted"
+        - "Still not right"
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Outcome
+      options:
+        - "Working device"
+        - "Working, but with problems"
+        - "Failed during teardown"
+        - "Failed during assembly"
+        - "Failed at pairing"
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification output
+      description: Output from the read-only checks in pairing 8.6, with serial numbers removed. Particularly useful is the product ID and how many HID interfaces enumerated.
+      render: shell
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What did this guide get wrong?
+      description: Steps that were unclear, settings that did not work, timings that were off, or claims that did not hold up.
+    validations:
+      required: true

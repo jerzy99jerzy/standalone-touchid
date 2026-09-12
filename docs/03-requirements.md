@@ -5,22 +5,30 @@
 **The Calvin enclosure model is designed only for the TKL (tenkeyless) version of Magic Keyboard with Touch ID.** This is the smaller version without the numeric keypad on the right side. The full-size variant with numpad has a significantly larger logic board that will not physically fit.
 
 - **Correct donor:** Model **A2449**, TKL layout, Lightning-charging generation
-- **Incorrect donor:** Model A2520 (Magic Keyboard with Touch ID and Numeric Keypad) will not fit
-- **Verification:** Model number is on the underside of the keyboard, in small print
+- **Incorrect donor:** anything else in the family, per the matrix below
+- **Verification:** the model number is printed in small type on the underside of the keyboard
+
+| Generation | Touch ID, TKL | Touch ID with numeric keypad |
+|---|---|---|
+| Lightning, 2021 | **A2449 - the donor this build requires** | A2520 |
+| USB-C, late 2024 | A3118 | A3119 |
+
+The four model numbers are disjoint, which makes the model number a sufficient test on its own. A2520 and A3119 carry a larger logic board that will not fit the box; A3118 is the right size but the wrong generation.
 
 When purchasing used, request confirmation of the model number before payment.
 
 ### Critical: Lightning generation vs USB-C generation
 
-On October 28, 2024, Apple revised the Magic Keyboard line to charge over USB-C instead of Lightning. This matters for the build. Calvin's enclosure was designed around the Lightning-era logic board and its Lightning port. The internal board layout and the charge/data port on the newer USB-C generation differ, and there is no guarantee the USB-C generation board fits the enclosure or that the port cutout aligns.
+Apple moved the Magic Keyboard line to USB-C charging in late October 2024, alongside the M4 iMac. *[Sources put the announcement on 28 October and availability a couple of days later; treat "late October 2024" as the reliable form.]* Calvin's enclosure was designed around the Lightning-era logic board and its Lightning port. Board layout and the charge port both changed, so there is no reason to expect a USB-C board to fit the box or the port cutout to line up.
 
-Marketplace listings are muddy on this point. Some sellers list a "2024" A2449 with a USB-C cable in the box (the cable being USB-C to Lightning does not make the keyboard a USB-C keyboard). Others list the genuinely new USB-C generation. Before buying:
+Marketplace listings are muddy. Sellers describe a "2024" A2449 because the box shipped with a USB-C to Lightning cable, which says nothing about the keyboard's own port. Two independent checks:
 
-- Confirm the keyboard's own charging port is **Lightning**, not USB-C. Ask the seller for a photo of the port on the back edge of the keyboard.
-- A Lightning port is the small flat oval Apple connector. A USB-C port is the rounded-rectangle symmetric connector.
-- If in doubt, favor a unit clearly described as the pre-October-2024 generation.
+- **Model number**, from the underside. A2449 is Lightning, full stop. There is no USB-C A2449.
+- **The port itself.** Ask for a photo of the back edge. Lightning is the small flat oval; USB-C is the symmetric rounded rectangle.
 
-This guide and the Calvin enclosure target the **Lightning** generation. If someone adapts the enclosure for the USB-C generation, that is a separate model and not covered here.
+These two must agree. A listing claiming A2449 while showing a USB-C port is not a careless seller, it is a device whose label does not match its hardware, and for something whose job is authorization that is a reason to buy elsewhere. See [Threat model 9.2](09-threat-model.md#92-supply-chain-and-the-used-donor) for why provenance is the one risk class this build genuinely adds.
+
+This guide and Calvin's enclosure target the **Lightning** generation. Adapting the box to the USB-C generation would be a different model and is out of scope here.
 
 ## 3.2 Target Mac - Apple Silicon required
 

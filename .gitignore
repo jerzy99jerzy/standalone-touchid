@@ -20,7 +20,7 @@ dist/
 build/
 *.log
 
-# STL files — should be downloaded from Printables, not tracked here
+# STL files - download from Printables, do not track here
 # (uncomment if you want to keep local copies out of git)
 # *.stl
 # *.3mf
@@ -33,4 +33,6 @@ banner_hires*.png
 # OS
 Thumbs.db
 Desktop.ini
+
+# Review artifacts - patches are delivered alongside the repo, never inside it
 *.patch

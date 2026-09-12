@@ -1,23 +1,26 @@
 # 4. Bill of Materials
 
-Prices below are approximate USD equivalents from mid-2026 markets. EU and PL prices are noted where the author verified them; other markets should adjust accordingly.
+Prices are approximate USD equivalents, spot-checked mid-2026. **They will drift and the used-market ones drift fast.** Treat every figure here as an order of magnitude, re-check before buying, and update the date stamp in this line if you refresh them.
 
 ## 4.1 Donor keyboard - most critical BOM line
+
+**The used market is the only route.** Apple's current stock is the USB-C generation (A3118 / A3119); the Lightning A2449 this build needs has been out of Apple's catalogue since the October 2024 refresh, so neither Apple Store nor Apple Refurbished is a path to a donor. Anything advertised as new A2449 is old channel stock, not Apple.
 
 | Source | Condition | Price (USD equiv.) |
 |--------|-----------|--------------------|
 | eBay, Craigslist, Facebook Marketplace, Reddit r/hardwareswap | Used | $100-140 |
-| Apple Refurbished | Refurbished | ~$150 |
-| Apple Store | New | $199 |
+| Remaining retailer channel stock, where it exists | New, old stock | Varies widely, often above used |
 
-EU/PL reference: used A2449 on Allegro/OLX runs 400-550 PLN; Apple Store PL sells new for 749 PLN.
+For reference, Apple's US list price for the A2449 at launch was $149, and Geerling's writeup describes the build as sacrificing "a $150 keyboard". If a used listing approaches that, the economics of the project stop working.
+
+EU/PL reference, mid-2026: used A2449 on Allegro and OLX ran roughly 400-550 PLN. Verify current asks rather than trusting this line.
 
 **Buying used, verify:**
-- Model number **A2449** (TKL, not A2520 numpad version)
-- **Lightning charging port, not USB-C** (Apple switched this generation to USB-C on 2024-10-28; the Calvin enclosure targets the Lightning generation, see [requirements 3.1](03-requirements.md))
+- Model number **A2449**. The generations carry disjoint numbers, so this is a sufficient test; see the matrix in [requirements 3.1](03-requirements.md)
+- **Lightning charging port, not USB-C.** Must agree with the model number. A mismatch means the listing does not describe the hardware, which is disqualifying for an authentication device
 - Touch ID works - ask the seller to demonstrate on video
-- Includes USB-C to Lightning cable - you need one for pairing tests
-- Visually inspect for prior opening - factory adhesive has a characteristic uniform appearance; prior openings are usually visible on the edges
+- Includes a data-capable USB-C to Lightning cable, or budget for one; you need it for pairing
+- Inspect for prior opening. Factory adhesive is uniform; a previous entry usually shows along the edges. This is your only pre-purchase tamper check, and [Threat model 9.2](09-threat-model.md#92-supply-chain-and-the-used-donor) explains why it is worth making
 
 ## 4.2 Filament
 
@@ -34,11 +37,14 @@ Total consumption for all four parts: 25-40 grams. One spool covers this project
 
 ## 4.3 Hardware - small screws
 
+Quantities below are Calvin's, from the material list on the model page.
+
 | Item | Quantity | Notes |
 |------|----------|-------|
-| M1.2 × 4 mm Phillips stainless steel screws | 11 | 7 for back plate, 2 for logic board, 2 for Lightning port mount |
-| M1.2 hex or square nuts | 2 | For Lightning port mount |
+| M1.2 × 4 mm Phillips stainless steel screws | 11 | 7 for the back plate over the button, 2 for the logic board, 2 for the Lightning port mount |
+| M1.2 hex or square nuts | 2 | For the Lightning port mount. Calvin also suggests keeping a few slightly longer screws on hand for this step |
 | Adhesive rubber feet, ~4 mm | 4 | Optional, prevents desk sliding |
+| Electrical tape | trace | Optional, insulates metal that could touch the board if a screw ever backs out |
 
 Best sourced as a mixed micro-screw kit (M1-M2.5 assortment) from Amazon, AliExpress, or your local electronics supplier. Approximately $8-12 for a kit that will last you multiple projects. Micro-screws lose themselves easily; buy the kit.
 

@@ -6,7 +6,7 @@ Common problems and diagnostic paths.
 
 ### C plate does not click - button sticks depressed
 
-**Diagnosis:** Layer height too high (printed at 0.20 or 0.12 mm instead of 0.10 mm), or the central stem is too tall.
+**Diagnosis:** layer height too high, printed at 0.20 or 0.12 mm instead of 0.10 mm, leaving the raised centre point too tall. This is the single most reported failure on this build and Geerling hit it at 0.12 mm.
 
 **Fix:** Reprint the C plate at 0.10 mm layer height. If that still doesn't help, sand the central stem with 600-grit paper, 0.1 mm at a time, testing between passes.
 
@@ -101,7 +101,7 @@ The keyboard itself is the expensive part; everything else (filament, screws, to
 
 ## 11.5 Where to get help
 
-- **GitHub issues on this repo** - for documentation gaps or corrections
-- **Jeff Geerling's blog comments** - active discussion of the original build
-- **Printables model comments** - Calvin responds to model-specific questions
+- **GitHub issues on this repo** - documentation gaps, corrections, and build reports
+- **[Comments on Calvin's model](https://www.printables.com/model/355924-clickable-touch-id-box-tkl-board-wired/comments)** - the closest thing to an authoritative venue for model-specific questions, and the source of several tips reproduced in this guide
+- **[Geerling's blog post](https://www.jeffgeerling.com/blog/2025/why-doesnt-apple-make-standalone-touch-id/)** and its comment thread - discussion of one complete build
 - **r/AppleHelp, r/hardware, r/functionalprint on Reddit** - general community support

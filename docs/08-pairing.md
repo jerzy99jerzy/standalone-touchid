@@ -5,7 +5,9 @@ Physical assembly is complete. Now the software side.
 ## 8.1 First connection
 
 1. Connect a USB-C to Lightning cable between your assembled Touch ID box and any USB-C port on your Apple Silicon Mac. Lightning side into the box; USB-C side into the Mac.
-2. Wait 5-10 seconds. macOS detects the device automatically. A notification may appear in the Bluetooth menu identifying the device as a Magic Keyboard with Touch ID, even though only the Touch ID subsystem is functional (there are no keys to type on).
+2. Wait 5-10 seconds. macOS detects the device automatically and identifies it as a Magic Keyboard with Touch ID, because that is what the logic board reports itself to be.
+
+Be precise about what that means. The keyboard function has not been removed, only its key matrix. *[Inference, not verified on a built unit: the HID keyboard interface should still enumerate, reporting a keyboard that can never produce a keystroke.]* That is cosmetically odd and, if your donor's provenance is uncertain, worth checking rather than shrugging at. [Section 8.6](#86-verifying-what-you-built) covers how.
 
 ## 8.2 Enrollment
 
@@ -52,6 +54,31 @@ Try a different USB-C port. Try a different USB-C to Lightning cable - not all L
 **"Touch ID not available right now":**
 Restart the Mac. Check whether you've hit a policy timeout (48-hour password requirement, or 5-failed-attempt lockout).
 
-## 8.6 Operational note - future Mac migration
+## 8.6 Verifying what you built
 
-If you buy a new Mac later and want to use the same box on it, re-pair using the same procedure. One box is paired to one Mac at a time, but the pairing identity is cyclable without limit. A single Mac can maintain up to 5 simultaneous Touch ID device pairings, so keeping multiple boxes on one Mac is possible.
+Everything below is read-only. Run it once while the device is known-good and keep the output; it is the baseline you will want the next time something behaves strangely.
+
+```bash
+# What enumerates over USB, and under what identity
+system_profiler SPUSBDataType | grep -i -B2 -A10 "keyboard"
+
+# Vendor and product identifiers. Apple's vendor ID is 0x05AC
+ioreg -p IOUSB -w0 -l | grep -i -E "USB Product Name|idVendor|idProduct"
+
+# Biometric policy state, system domain
+bioutil -r -s
+
+# Watch the biometric subsystem during a real authorization,
+# then run `sudo true` in a second terminal
+log stream --predicate 'subsystem == "com.apple.BiometricKit"' --level info
+```
+
+What you are checking:
+
+- The device appears under Apple's vendor ID as a Magic Keyboard with Touch ID. Record the product ID from your own unit rather than copying a number out of someone else's writeup.
+- One HID keyboard interface is expected even with no keys attached. An interface you cannot account for is a reason to stop before enrolling a finger, and a reason to re-read [Threat model 9.2](09-threat-model.md#92-supply-chain-and-the-used-donor).
+- `sudo true` raises a Touch ID prompt rather than a password prompt, and one physical press completes exactly one authorization.
+
+## 8.7 Operational note - future Mac migration
+
+If you buy a new Mac later and want to use the same box on it, re-pair using the same procedure. One box is paired to one Mac at a time, and the pairing identity is cyclable without limit. *[The figure of five simultaneous keyboard pairings per Mac circulates widely but this guide has not traced it to an Apple source; treat it as unverified rather than as a limit to design around.]*
