@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/docs-v1.3.0-00D9FF?style=flat-square" alt="version"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/docs-v1.3.2-00D9FF?style=flat-square" alt="version"></a>
   <a href="#the-security-question"><img src="https://img.shields.io/badge/focus-threat%20model-9184d9?style=flat-square" alt="focus"></a>
   <a href="docs-site/index.html"><img src="https://img.shields.io/badge/site-interactive%20guide-9184d9?style=flat-square" alt="site"></a>
   <a href="docs/04-bom.md"><img src="https://img.shields.io/badge/cost-~$100--150-e8ede4?style=flat-square" alt="cost"></a>
@@ -123,7 +123,7 @@ That labeling is the point. A build guide claiming "the security is unchanged" w
 | 0 | [Documentation index](docs/00-index.md) | Reading order and quick-reference table |
 | 1 | [Protocol analysis](docs/01-protocol.md) | Apple's Touch ID cryptographic architecture: PKA block, attestation, AES-GCM session, secure intent |
 | 2 | [Rejected alternatives](docs/02-alternatives.md) | Why Apple Watch fails as a desk authenticator, why FIDO2 readers do not replace Touch ID |
-| 3 | [Requirements](docs/03-requirements.md) | Model matrix, the Lightning-generation constraint, prerequisites |
+| 3 | [Requirements](docs/03-requirements.md) | Model matrix, the Lightning-generation constraint, power architecture, prerequisites |
 | 4 | [Bill of materials](docs/04-bom.md) | Donor sourcing, filament, hardware, tools, cost |
 | 5 | [3D print plan](docs/05-print-plan.md) | Per-part slicer settings from Calvin's notes, PETG parameters, orientation, post-processing |
 | 6 | [Teardown guide](docs/06-teardown.md) | Disassembly, four failure points, parts to keep, Li-Po handling |
@@ -175,6 +175,7 @@ Buy a used Magic Keyboard with Touch ID, model A2449, the tenkeyless Lightning g
 
 - **Mac with Apple Silicon** (M1 or later). Apple does not support Magic Keyboard Touch ID on Intel Macs, T2 or otherwise.
 - **FDM 3D printer** with a heated bed reaching 75-85°C and capable of 0.10 mm layers. Prusa MK3S/MK4, Bambu A1/P1/X1, Voron 2.4, Creality K1, Sovol SV06+ all qualify.
+- **A spare USB-C port, permanently.** The finished box has no battery and no antenna; it runs on bus power over a data-capable USB-C to Lightning cable and does nothing when unplugged. Whether it works behind a hub or dock is an [open question](docs/03-requirements.md#open-question-hubs-and-docks).
 - **Willingness to destructively disassemble** a Magic Keyboard. There is no clean way back.
 - **PETG filament.** See the [BOM](docs/04-bom.md).
 - **Basic electronics repair skills.** No soldering, but you will handle flex PCB and mm-scale screws.
@@ -201,9 +202,19 @@ Documentation here is [MIT](LICENSE). Calvin's STL files are licensed separately
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Two contributions are worth more than everything else: a documented build report from your own attempt, and any claim in here you can show is wrong, unsourced, or labeled as fact when it is not.
 
+## Questions
+
+**Open an [issue](https://github.com/jerzy99jerzy/standalone-touchid/issues) first.** Build problems, sourcing questions, corrections and anything about the security claims all belong there, where the next person asking the same thing can find the answer already written down. Most questions that arrive by email would have been more useful as issues.
+
+For anything that genuinely does not belong in public, email jerzy.siwecki@me.com and **put `[standalone-touchid]` in the subject line**. That tag is how this project's mail gets sorted; without it a message lands in the general pile and will take longer to reach a reply.
+
 ## Disclaimer
 
 You will destroy an Apple product. You may cut yourself, burn yourself, or set a lithium-polymer battery on fire. This documentation is provided as is, with no warranty of any kind. Apple supports none of it, and some regulated environments will reject a physically modified authenticator regardless of what survived the modification.
+
+## Author
+
+Jerzy Siwecki. Security engineer working across SIEM, cloud security and automation; this and other projects run under Handsome Boys Computer Club in Warsaw. [LinkedIn](https://www.linkedin.com/in/jerzysiwecki/).
 
 ---
 

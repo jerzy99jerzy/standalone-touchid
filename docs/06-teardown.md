@@ -66,4 +66,6 @@ After full teardown, retain the following for reassembly in the new enclosure:
 
 The remainder of the keyboard - the plastic housing, the mechanical keys and mechanisms, the battery, the RF antenna, the top and bottom aluminum sheets, all remaining screws - goes to e-waste.
 
+Two of those are worth pausing over, because discarding them is the moment the build becomes one-way. **The battery and the RF antenna together are what made the donor a wireless device.** Once they are out, the finished box is bus-powered and tethered for good: no battery to run on, no antenna to talk over. That is the intended design and Calvin's model is named "wired" accordingly, but it is a decision you make here, with a spudger, rather than later. [Requirements 3.3](03-requirements.md#33-power-and-what-the-build-gives-up) spells out what it costs you.
+
 The battery in particular: dispose properly. Do not throw a used Li-Po in with your regular trash. Most electronics retailers accept them for free recycling.

@@ -32,6 +32,8 @@ This is the full documentation set for the Standalone Touch ID build. Read it in
 | Critical print setting | C plate at 0.10 mm layer height |
 | Screws | 11x M1.2x4mm, plus 2x M1.2 nuts |
 | Session crypto (peripheral channel) | AES-GCM 256-bit, ephemeral ECDH P-256 |
+| Power | Bus-powered over Lightning, no battery, no wireless mode |
+| Standing cost | One USB-C port on the Mac, occupied permanently |
 | Total cost | ~$100-150 USD equivalent, used market only |
 | Total time | 4-6 hours |
 

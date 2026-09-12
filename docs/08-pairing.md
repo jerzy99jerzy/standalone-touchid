@@ -49,7 +49,9 @@ Check ribbon cable seating to logic board. Physically reopen the box, verify the
 Enrollment likely incomplete or template mismatch. Delete all fingerprints in System Settings and enroll again.
 
 **macOS does not detect the device:**
-Try a different USB-C port. Try a different USB-C to Lightning cable - not all Lightning cables carry data. Some cheap third-party cables are charge-only.
+Try a different USB-C to Lightning cable first - not all Lightning cables carry data, and charge-only cables are common. Then try a different port on the Mac.
+
+If the box is behind a hub, a dock, or a monitor's downstream ports, take it out of that chain and go straight into the Mac before assuming the build is at fault. Whether this device enumerates reliably behind a hub is an open question, not a solved one; see [requirements 3.3](03-requirements.md#open-question-hubs-and-docks). A box that works direct and fails through a dock is a useful data point rather than a broken build, and the [build report template](../.github/ISSUE_TEMPLATE/build-report.yml) has a field for it.
 
 **"Touch ID not available right now":**
 Restart the Mac. Check whether you've hit a policy timeout (48-hour password requirement, or 5-failed-attempt lockout).

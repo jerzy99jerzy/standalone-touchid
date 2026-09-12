@@ -19,7 +19,7 @@ EU/PL reference, mid-2026: used A2449 on Allegro and OLX ran roughly 400-550 PLN
 - Model number **A2449**. The generations carry disjoint numbers, so this is a sufficient test; see the matrix in [requirements 3.1](03-requirements.md)
 - **Lightning charging port, not USB-C.** Must agree with the model number. A mismatch means the listing does not describe the hardware, which is disqualifying for an authentication device
 - Touch ID works - ask the seller to demonstrate on video
-- Includes a data-capable USB-C to Lightning cable, or budget for one; you need it for pairing
+- Includes a data-capable USB-C to Lightning cable, or budget for one. Not just for pairing: the finished box has no battery and runs on bus power, so the cable and one port on your Mac are permanent fixtures. See [requirements 3.3](03-requirements.md#33-power-and-what-the-build-gives-up)
 - Inspect for prior opening. Factory adhesive is uniform; a previous entry usually shows along the edges. This is your only pre-purchase tamper check, and [Threat model 9.2](09-threat-model.md#92-supply-chain-and-the-used-donor) explains why it is worth making
 
 ## 4.2 Filament

@@ -68,7 +68,7 @@ This is worth stating precisely, because it is a point where a careless writer w
 
 Both AES-CCM and AES-GCM are authenticated-encryption (AEAD) modes providing confidentiality and integrity together. The peripheral channel uses GCM; the built-in and sensor-local channel uses CCM. If you see this project (or any writeup) claim the Magic Keyboard uses AES-CCM end to end, that is the built-in channel's cipher being misattributed to the peripheral channel.
 
-The transport layer itself (the Lightning cable in this build, or Bluetooth in wireless mode) is not part of the trust chain. The cable is a dumb carrier for ciphertext. Owning the transport gives an attacker authenticated ciphertext and traffic metadata, nothing more. In Bluetooth mode the same AES-GCM envelope applies on top of the Bluetooth link; compromising the BT stack yields ciphertext.
+The transport layer itself is not part of the trust chain. In a factory keyboard that layer is Bluetooth or the cable; in this build it is always the cable, because the antenna does not survive teardown. The cable is a dumb carrier for ciphertext. Owning the transport gives an attacker authenticated ciphertext and traffic metadata, nothing more. In Bluetooth mode the same AES-GCM envelope applies on top of the Bluetooth link; compromising the BT stack yields ciphertext.
 
 ## 1.6 Secure intent
 

@@ -63,7 +63,7 @@ The only tier this guide argues against. It is the one change that puts a solder
 
 A single 1206 SMD LED behind a 2 mm semi-transparent window in the enclosure side, with a current-limiting resistor sized for your supply, powered from a separate USB-C breakout at roughly $5. Cyan (#00D9FF) is the accent this documentation uses throughout, a convention adopted here rather than a colour anyone official specified.
 
-**Do not tap the Lightning line for it.** You would be drawing from a power path budgeted for the logic board alone, with no upside and a failure mode that ends in reopening the box.
+**Do not tap the Lightning line for it.** Nobody has published what the board draws, so there is no headroom figure to reason from, and the component you would be experimenting on is the one part of this build you cannot buy a replacement for without repeating the whole teardown. A separate supply costs five dollars and risks nothing.
 
 The effect is one discreet point of light in a dark room. Roughly two hours and a soldering iron. It photographs well, which is most of the honest argument for it.
 

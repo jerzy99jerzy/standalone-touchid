@@ -41,6 +41,19 @@ body:
     validations:
       required: true
   - type: dropdown
+    id: topology
+    attributes:
+      label: How is it connected?
+      description: Whether this device enumerates reliably behind a hub or dock is an open question in the guide. Your answer is the data that closes it.
+      options:
+        - "Direct into a port on the Mac"
+        - "Through a USB-C hub or dongle"
+        - "Through a dock or docking station"
+        - "Through a monitor's downstream port"
+        - "Tried both direct and through a hub"
+    validations:
+      required: true
+  - type: dropdown
     id: outcome
     attributes:
       label: Outcome
@@ -56,7 +69,7 @@ body:
     id: verification
     attributes:
       label: Verification output
-      description: Output from the read-only checks in pairing 8.6, with serial numbers removed. Particularly useful is the product ID and how many HID interfaces enumerated.
+      description: Output from the read-only checks in pairing 8.6, with serial numbers removed. Particularly useful is the product ID and how many HID interfaces enumerated. If you tried both direct and hub connections, output from each is more useful than either alone.
       render: shell
   - type: textarea
     id: wrong

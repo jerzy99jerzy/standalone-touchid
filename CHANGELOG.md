@@ -4,6 +4,28 @@ All notable changes to this documentation are recorded here. This project versio
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) loosely, adapted for a documentation repo.
 
+## [1.3.2] - 2026-09
+
+### Added
+- **README "Questions" section.** Issues are named as the default channel, with the reasoning stated rather than implied: an answered issue helps everyone who searches later, an answered email helps one person. Email is kept for what does not belong in public, and asks for a `[standalone-touchid]` subject-line tag so project mail can be filtered.
+- **README "Author" section**, immediately above the footer.
+- **CI step rejecting unreplaced placeholder tokens.** The contact address in the README ships as a placeholder, and this gate stops it reaching a release. It applies to any future placeholder as well.
+- Cross-references to the contact route from `SECURITY.md` and `CONTRIBUTING.md`, so the three documents point at one answer rather than three.
+
+## [1.3.1] - 2026-09
+
+### Added
+- **`docs/03-requirements.md` section 3.3, power architecture.** The finished device is bus-powered, permanently tethered, and has no wireless mode, because both the battery and the RF antenna are discarded during teardown. All of that was derivable from the parts lists in sections 4 and 6 and stated nowhere. It is a constraint on the reader's desk rather than a build detail, so it now sits with the other requirements. The assumption that the logic board runs on bus power with no cell present is labeled as inference: no source states it, three independent battery-less builds imply it, and nobody has published a current draw figure.
+- **Named open question: hubs and docks.** Every documented build connects directly to a port on the Mac. Whether the device enumerates reliably behind a hub, dock, or monitor downstream port is unknown, and the guide now says so instead of leaving readers to infer an answer. The cryptography is indifferent to topology; enumeration and power delivery are not.
+- **Connection topology field in the build report template**, so the open question above is answered by data from other builders rather than by one eventual build.
+
+### Changed
+- **`docs/06-teardown.md` 6.4** now marks the point of no return. Discarding the battery and the antenna together is what converts the donor into a wired device, and that happens with a spudger in hand rather than as a later configuration choice.
+- **`docs/04-bom.md`** described the cable as something needed for pairing. It is needed permanently.
+- **`docs/01-protocol.md`** referred to Bluetooth as this build's alternative transport. There is no wireless mode in this build; the antenna does not survive teardown.
+- **`docs/10-customization.md` Tier 4 retracts an unsupported claim introduced in v1.3.0.** The argument against tapping the Lightning line for an LED rested on a power budget nobody has measured. The argument stands without it: there is no headroom figure to reason from, and the board is the one part that cannot be replaced without repeating the teardown.
+- **README prerequisites** now list the permanently occupied USB-C port alongside the Mac and the printer.
+
 ## [1.3.0] - 2026-09
 
 ### Fixed

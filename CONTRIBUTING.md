@@ -19,4 +19,6 @@ This is a documentation repository. Corrections are the main currency.
 
 ## Practical
 
+Questions are not contributions, but they land in the same place: open an issue rather than sending mail, because an answered issue helps the next person and an answered email helps one. The [README](README.md#questions) covers the exception and the subject-line tag it needs.
+
 Small corrections: open a pull request directly. Anything that changes a security claim, an attribution, or the build procedure: open an issue first so the sourcing can be discussed before the wording. Update `CHANGELOG.md` in the same change.

@@ -33,6 +33,19 @@ jobs:
           fi
           echo "clean"
 
+      - name: No unreplaced placeholders
+        run: |
+          # Split so this step cannot match its own source.
+          if grep -rIn 'REPLACE''_WITH_' \
+               --exclude-dir=.git \
+               --exclude-dir=docs-site \
+               --exclude=docs-check.yml \
+               . ; then
+            echo "::error::placeholder token left in a committed file"
+            exit 1
+          fi
+          echo "clean"
+
       - name: STL files are not redistributed here
         run: |
           if find . -path ./.git -prune -o \( -name '*.stl' -o -name '*.3mf' \) -print | grep -q .; then

@@ -15,6 +15,8 @@ Documentation, plus four generated HTML pages under `docs-site/`. There is no ap
 
 Public is the right venue for all of the above: nothing here is exploitable against a running system, and a wrong claim is more useful corrected in the open than disclosed privately.
 
+If something genuinely needs to stay private, the contact route and subject-line tag are in the [README](README.md#questions).
+
 ## What this repository cannot act on
 
 Vulnerabilities in Apple's hardware or software. Report those to Apple through [their product security process](https://support.apple.com/en-us/HT201220). If an Apple issue invalidates a claim made here, an issue about the claim is still welcome.
