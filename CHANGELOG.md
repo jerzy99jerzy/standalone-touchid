@@ -4,6 +4,16 @@ All notable changes to this documentation are recorded here. This project versio
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) loosely, adapted for a documentation repo.
 
+## [1.2.0] - 2026-09
+
+### Added
+- `docs-site/`: a rendered face of the same documentation, as self-contained HTML with no build step. `index.html` is the interactive build guide (all twelve sections on one page, with print, teardown, assembly and pairing checklists that persist locally), `deck.html` a fifteen-slide project deck with speaker notes, `print.html` the paginated guide for paper, and `enclosure.html` a 3D reference model of the enclosure.
+- `assets/renders/`: six stills of the reference enclosure model at 2400x1350, two of them dimensioned, plus `tid01-turntable.gif`, a captioned looping turntable. All are exported from `docs-site/enclosure.html`, which can also export the mesh as OBJ + MTL or GLB.
+- README section linking the rendered documentation and showing the renders.
+
+### Notes
+- The renders show a reference model built to the proportions documented here, not Calvin's STL geometry. The printable enclosure remains Calvin's work under CC BY 4.0 and is still not redistributed in this repository.
+
 ## [1.1.0] - 2026-06
 
 ### Changed

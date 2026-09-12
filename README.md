@@ -3,7 +3,12 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/docs-v1.1.0-00D9FF?style=flat-square" alt="version"></a>
+  <img src="assets/renders/tid01-turntable.gif" alt="TID/01 enclosure, turntable render" width="640">
+</p>
+
+<p align="center">
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/docs-v1.2.0-00D9FF?style=flat-square" alt="version"></a>
+  <a href="docs-site/index.html"><img src="https://img.shields.io/badge/site-interactive%20guide-9184d9?style=flat-square" alt="site"></a>
   <a href="#quick-summary"><img src="https://img.shields.io/badge/status-documented-00D9FF?style=flat-square" alt="status"></a>
   <a href="#4-bill-of-materials"><img src="https://img.shields.io/badge/cost-~$100--150-e8ede4?style=flat-square" alt="cost"></a>
   <a href="#5-3d-print-plan"><img src="https://img.shields.io/badge/material-PETG-e8ede4?style=flat-square" alt="material"></a>
@@ -47,6 +52,36 @@ A distribution of the 3D model files. The STL files belong to Calvin and are hos
 | 9 | [Threat model](docs/09-threat-model.md) | Security posture analysis - transport attacks, hardware attacks, liveness, residual risks |
 | 10 | [Customization](docs/10-customization.md) | Ghost in the Shell aesthetic direction, four tiers of visual intervention |
 | 11 | [Troubleshooting](docs/11-troubleshooting.md) | Decision tree for print, teardown, and pairing failures |
+
+---
+
+## Rendered documentation
+
+The same documentation, rendered. Every file is self-contained HTML: open it from
+disk, or serve the folder with GitHub Pages.
+
+| | |
+|---|---|
+| **[Interactive build guide](docs-site/index.html)** | All twelve sections in one page, with checklists for the print queue, teardown, assembly and pairing that remember where you stopped |
+| **[Project deck](docs-site/deck.html)** | Fifteen slides with speaker notes, for a talk or a write-up |
+| **[Printable guide](docs-site/print.html)** | The same build paginated for paper; print to PDF from the browser |
+| **[3D enclosure viewer](docs-site/enclosure.html)** | Reference model of the box, lid, C plate and back plate: orbit it, explode it, toggle dimensions, export OBJ + MTL or GLB, or re-export the images below |
+
+| Plan | Exploded |
+|------|----------|
+| ![Plan view](assets/renders/tid01-top.png) | ![Exploded view](assets/renders/tid01-exploded.png) |
+
+### Dimensions
+
+![Plan with dimensions](assets/renders/tid01-dimensions-plan.png)
+
+![Elevation with dimensions](assets/renders/tid01-dimensions-elevation.png)
+
+> The renders and the turntable GIF show a reference model built to the documented
+> proportions, not Calvin's STL geometry. The printable enclosure is
+> [Printables 355924](https://www.printables.com/model/355924) by
+> [Calvin](https://www.printables.com/@Calvin_5743), CC BY 4.0, and is not
+> redistributed here.
 
 ---
 
