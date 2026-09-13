@@ -4,6 +4,29 @@ All notable changes to this documentation are recorded here. This project versio
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) loosely, adapted for a documentation repo.
 
+## [1.3.4] - 2026-09
+
+### Added
+- **`docs/02-alternatives.md` 2.4, buying one already built.** A market of small sellers offers finished modules, and this repository did not acknowledge it. That was a real omission in a document whose stated value is honesty about alternatives: the guide described a destructive teardown without telling the reader there is a way to skip it. The section says plainly that buying is the right answer for most people, and then says the one thing nobody selling these will: the teardown you find inconvenient is also your only look inside a used authenticator, and buying trades that inspection away. What buying does not cost you is authenticity of the silicon, since attestation refuses a substituted sensor either way.
+- **Parallel work section in `CREDITS.md`**, covering another open build published in August 2026 and a Lego enclosure variant. A reader choosing what to build should see the field.
+
+### Changed
+- **`docs/02-alternatives.md` is now "Alternatives" rather than "Rejected alternatives"**, because one of the four is not rejected.
+- **The 2.5 summary no longer says that cannibalizing a keyboard is the only option.** That conflated hardware with labour. No other sensor reaches the Secure Enclave, which is a fact about the hardware; whether *you* take the keyboard apart is a separate question with two valid answers.
+- **`docs/03-requirements.md` scopes two claims that were stated more broadly than the evidence supports.** A numpad donor does not fit *Calvin's* box; the Snazzy Labs model this one remixes ships a variant drawn around the 109-key board, so that donor is wrong for this enclosure rather than useless. And the absence of a wireless mode is a consequence of choosing a wired enclosure, made at model-selection time rather than discovered after teardown; the Snazzy Labs model includes a wireless variant that keeps the cell, untested here.
+- **`docs/04-bom.md`** now carries Apple's launch list price for the A2520 alongside the A2449, which closes out the $199 figure removed in v1.3.0.
+- **README** states in the first screen that finished modules can be bought, rather than leaving the reader to discover it in section 2.
+
+## [1.3.3] - 2026-09
+
+### Changed
+- **The trust chain diagram in `docs/01-protocol.md` 1.2 is now Mermaid** rather than ASCII, so GitHub renders it as a figure. Redrawn rather than transliterated: the two channels are now grouped into the donor hardware and the Mac, which makes the trust boundary visible in the diagram instead of only in the prose around it. Syntax validated against the Mermaid parser.
+- Left deliberately unstyled. Fills and custom colours render differently between GitHub's light and dark themes, and legibility in both matters more here than palette consistency.
+
+### Notes
+- This was the only ASCII diagram in the repository. The block in `docs/10-customization.md` is a typographic specimen for embossing, not a diagram, and stays a code block.
+- The rendered pages under `docs-site/` still carry the old ASCII version. They cannot be regenerated, as [docs-site/README.md](docs-site/README.md) explains, so this is a concrete instance of the drift that file warns about. The Markdown remains authoritative.
+
 ## [1.3.2] - 2026-09
 
 ### Added

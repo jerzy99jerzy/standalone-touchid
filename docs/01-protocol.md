@@ -22,16 +22,23 @@ Practical consequence for this build: your enrolled templates live in your Mac's
 
 The path from fingertip to match decision crosses two independently secured cryptographic channels stacked in series. Both must be intact for the device to function, and both are established at manufacture, which is why you cannot build one of these from non-Apple parts.
 
+```mermaid
+flowchart LR
+    subgraph puck["The puck: donor hardware, carried over unmodified"]
+        direction LR
+        S["Touch ID sensor<br/>captures the raster scan"]
+        P["PKA block<br/>attestation and transport crypto"]
+    end
+
+    subgraph mac["Your Mac"]
+        E["Secure Enclave<br/>enrolment, matching, policy"]
+    end
+
+    S -->|"Channel 1<br/>factory-keyed at manufacture"| P
+    P -->|"Channel 2<br/>ECDHE P-256, AES-GCM 256<br/>negotiated at pairing"| E
 ```
-  +----------+   Channel 1     +-----------+   Channel 2     +----------------+
-  | Touch ID |  factory-keyed  | PKA block |  ECDHE-paired   | Secure Enclave |
-  |  sensor  |---------------->| (keyboard)|---------------->|   (your Mac)   |
-  +----------+  sensor<->PKA    +-----------+  PKA<->SE,       +----------------+
-       |                             |         AES-GCM P-256          |
-   captures                     attestation                      enrollment,
-   raster scan                  + transport                      matching,
-                                crypto                           policy
-```
+
+The grouping is the argument this repository makes. Everything in the left box is donor silicon that crosses into the new enclosure untouched, and everything in the right box never leaves your Mac. The build replaces the plastic around the left box and nothing else.
 
 ## 1.3 Channel 1: sensor to PKA block (inside the keyboard)
 

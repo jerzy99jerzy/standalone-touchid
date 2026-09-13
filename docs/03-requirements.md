@@ -13,7 +13,9 @@
 | Lightning, 2021 | **A2449 - the donor this build requires** | A2520 |
 | USB-C, late 2024 | A3118 | A3119 |
 
-The four model numbers are disjoint, which makes the model number a sufficient test on its own. A2520 and A3119 carry a larger logic board that will not fit the box; A3118 is the right size but the wrong generation.
+The four model numbers are disjoint, which makes the model number a sufficient test on its own. A2520 and A3119 carry a larger logic board; A3118 is the right size but the wrong generation.
+
+"Will not fit" here means Calvin's box specifically, and that is worth separating from a claim about the hardware. The Snazzy Labs model this one remixes ships in three variants, including one drawn around the 109-key board, so a numpad donor is a wrong donor for this enclosure rather than a useless one. Pick the enclosure first, then buy to match it.
 
 When purchasing used, request confirmation of the model number before payment.
 
@@ -43,6 +45,8 @@ This is the constraint most likely to surprise someone who knows the donor as a 
 **The finished device is bus-powered and permanently tethered.** The Li-Po cell comes out during teardown and is discarded, so there is no internal power source. Everything the box does, it does on power drawn from the host over the Lightning port. Unplug the cable and it is an inert lump of PETG.
 
 **There is no wireless mode, and it cannot be added back.** The RF antenna is discarded alongside the battery in [teardown 6.4](06-teardown.md#64-what-to-discard). This is not a configuration you have switched off; the hardware is gone. Calvin's model is named "wired" for a reason.
+
+That choice is made when you pick an enclosure, not later. The Snazzy Labs model includes a wireless variant sized to keep the cell, which is why it is the larger of the two. *[This guide has not tested that variant and makes no claim about whether Bluetooth still works in it.]* If a battery matters to you, decide before you buy a donor, because after teardown the decision is behind you.
 
 **A data-capable USB-C to Lightning cable occupies one port on your Mac, permanently.** Not a charge-only cable. Budget the port as a standing cost of the build rather than as something you plug in when needed.
 

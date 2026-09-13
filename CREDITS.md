@@ -32,6 +32,14 @@ This project is documentation around work by others. It does not distribute any 
 - Jeff reported reprinting a plate at 0.1 mm after his slicer default of 0.12 mm left it sitting too high. He calls the part the "Touch ID backing plate"; Calvin's instructions put the 0.1 mm requirement on the C plate, and Calvin is the primary source this guide follows
 - Jeff's build is also the source for the nut-balancing technique in [Assembly](docs/07-assembly.md) and the 50/50 assessment of the Touch ID flex cable in [Teardown](docs/06-teardown.md)
 
+## Parallel work
+
+Other people have solved the same problem differently. None of this guide depends on them; they are here because a reader deciding what to build deserves to see the field rather than one option.
+
+- **[zimengxiong/tinytouch](https://github.com/zimengxiong/tinytouch)** - a separate open standalone Touch ID build, published August 2026 with an accompanying video.
+- **[grepjason](https://grepjason.sh/2022/standalone-touch-id-part-2)** - an enclosure assembled from Lego rather than printed, surfaced in the Hacker News thread on Geerling's post.
+- **Commercial modules.** Several small sellers offer finished units; see [alternatives 2.4](docs/02-alternatives.md#24-buying-one-already-built). They are not credited individually here because the storefronts change faster than this file does, and because at least some of them appear to be selling community designs.
+
 ## Teardown references
 
 **KhaosT**

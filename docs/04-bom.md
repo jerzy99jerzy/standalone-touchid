@@ -11,7 +11,7 @@ Prices are approximate USD equivalents, spot-checked mid-2026. **They will drift
 | eBay, Craigslist, Facebook Marketplace, Reddit r/hardwareswap | Used | $100-140 |
 | Remaining retailer channel stock, where it exists | New, old stock | Varies widely, often above used |
 
-For reference, Apple's US list price for the A2449 at launch was $149, and Geerling's writeup describes the build as sacrificing "a $150 keyboard". If a used listing approaches that, the economics of the project stop working.
+For reference, Apple's US list prices at launch were $149 for the A2449 and $179 for the A2520 with the numeric keypad, and Geerling's writeup describes the build as sacrificing a keyboard worth about $150. If a used listing approaches that, the economics of the project stop working, and [buying a finished module](02-alternatives.md#24-buying-one-already-built) starts looking better.
 
 EU/PL reference, mid-2026: used A2449 on Allegro and OLX ran roughly 400-550 PLN. Verify current asks rather than trusting this line.
 

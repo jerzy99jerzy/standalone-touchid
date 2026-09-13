@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/docs-v1.3.2-00D9FF?style=flat-square" alt="version"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/docs-v1.3.4-00D9FF?style=flat-square" alt="version"></a>
   <a href="#the-security-question"><img src="https://img.shields.io/badge/focus-threat%20model-9184d9?style=flat-square" alt="focus"></a>
   <a href="docs-site/index.html"><img src="https://img.shields.io/badge/site-interactive%20guide-9184d9?style=flat-square" alt="site"></a>
   <a href="docs/04-bom.md"><img src="https://img.shields.io/badge/cost-~$100--150-e8ede4?style=flat-square" alt="cost"></a>
@@ -108,6 +108,8 @@ Documentation. A build guide with sourcing, per-part print settings, a teardown 
 
 A distribution of the 3D model files. The STLs are Calvin's and live on [Printables](https://www.printables.com/model/355924). Download them from source; check the license shown there before remixing. This repo links, credits, and documents around them.
 
+It is also not an argument that you should build one. Finished modules are for sale from a handful of small sellers, and for most people that is the better trade. [Alternatives 2.4](docs/02-alternatives.md#24-buying-one-already-built) covers what buying costs you, which is one specific thing rather than nothing.
+
 ## Epistemic discipline
 
 Every cryptographic claim in [Protocol analysis](docs/01-protocol.md) is attributed to Apple's Platform Security guide. Where this repository reasons past what Apple states, it says `Inference:` in the text. Where a claim rests on an expectation about this build that nobody has tested, it is marked in brackets where it appears. Where a number circulates widely but could not be traced to a source, it is recorded as untraced rather than quietly repeated.
@@ -122,7 +124,7 @@ That labeling is the point. A build guide claiming "the security is unchanged" w
 |---|----------|----------|
 | 0 | [Documentation index](docs/00-index.md) | Reading order and quick-reference table |
 | 1 | [Protocol analysis](docs/01-protocol.md) | Apple's Touch ID cryptographic architecture: PKA block, attestation, AES-GCM session, secure intent |
-| 2 | [Rejected alternatives](docs/02-alternatives.md) | Why Apple Watch fails as a desk authenticator, why FIDO2 readers do not replace Touch ID |
+| 2 | [Alternatives](docs/02-alternatives.md) | Why Apple Watch and FIDO2 readers do not replace Touch ID, and why buying a finished module is a legitimate route |
 | 3 | [Requirements](docs/03-requirements.md) | Model matrix, the Lightning-generation constraint, power architecture, prerequisites |
 | 4 | [Bill of materials](docs/04-bom.md) | Donor sourcing, filament, hardware, tools, cost |
 | 5 | [3D print plan](docs/05-print-plan.md) | Per-part slicer settings from Calvin's notes, PETG parameters, orientation, post-processing |

@@ -6,7 +6,7 @@ This is the full documentation set for the Standalone Touch ID build. Read it in
 
 **Before you buy anything:**
 1. [Protocol analysis](01-protocol.md) - why this works and what stays intact
-2. [Rejected alternatives](02-alternatives.md) - why not an Apple Watch or FIDO2 reader
+2. [Alternatives](02-alternatives.md) - why not an Apple Watch or FIDO2 reader
 3. [Requirements](03-requirements.md) - compatibility, the A2449 Lightning-generation caveat, prerequisites
 4. [Bill of materials](04-bom.md) - what to buy and roughly what it costs
 
