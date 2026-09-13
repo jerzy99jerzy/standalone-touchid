@@ -36,3 +36,4 @@ Desktop.ini
 
 # Review artifacts - patches are delivered alongside the repo, never inside it
 *.patch
+patch*.py
